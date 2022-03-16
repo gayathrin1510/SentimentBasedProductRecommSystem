@@ -10,7 +10,6 @@ import pickle
 # Importing common_utils for loading required variables
 import common_utils
 
-
 # Loading Recommendation System
 ProductRecommendationSystem = pickle.load(file=open(common_utils.recomm_system_path, 'rb'))
 # Loading ProductReviewMapping (TRAIN)
@@ -62,7 +61,7 @@ def get_sentimentBasedProductRecommendations(username):
         filteredReviews = (productReviewsData[productReviewsData.name == product].reviews_text)
 
         #pre_process and vectorize the text
-        filteredReviews = filteredReviews.apply(pre_process_text)
+        filteredReviews = filteredReviews.apply(common_utils.process_text)
         reviews_vectorized = vectorizer.transform(filteredReviews)
 
         # get the average sentiment for every product
