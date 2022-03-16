@@ -36,7 +36,7 @@ def dump_as_pickle(model, name):
     print('successfully saved at: ',"model_pickles\\"+name+".pkl")
 
 # text pre_processing
-def pre_process_text(text):
+def process_text(text):
 
     '''
         This method accepts a text and cleans and pre-processes the text for vectorizer to use. 
