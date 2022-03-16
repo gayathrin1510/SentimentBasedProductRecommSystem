@@ -11,14 +11,14 @@ import pickle
 import common_utils
 
 # Loading Recommendation System
-ProductRecommendationSystem = common_utils.load_from_pickle(common_utils.recomm_system_path, 'rb')
+ProductRecommendationSystem = common_utils.load_from_pickle(common_utils.recomm_system_path)
 # Loading ProductReviewMapping (TRAIN)
 productMap = pd.read_csv(common_utils.prod_reviews_mapping_path)
 productReviewsData = pd.read_csv(common_utils.processed_train_data_path)
 # Loading Vectorizer
-vectorizer = common_utils.load_from_pickle(common_utils.tfidf_vectorizer_path, 'rb')
+vectorizer = common_utils.load_from_pickle(common_utils.tfidf_vectorizer_path)
 # Loading Sentiment Classifier
-SentimentClassifier = common_utils.load_from_pickle(common_utils.sentiment_classifier_path, 'rb')
+SentimentClassifier = common_utils.load_from_pickle(common_utils.sentiment_classifier_path)
 # Loading the Probability Threshold
 probThreshold = common_utils.prob_threshold_val
 
