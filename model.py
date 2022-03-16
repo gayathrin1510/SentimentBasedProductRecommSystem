@@ -10,7 +10,6 @@ import pickle
 # Importing common_utils for loading required variables
 import common_utils
 
-
 # Loading Recommendation System
 ProductRecommendationSystem = pickle.load(file=open(common_utils.recomm_system_path, 'rb'))
 # Loading ProductReviewMapping (TRAIN)
